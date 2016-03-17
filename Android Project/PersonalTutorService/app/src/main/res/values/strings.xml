@@ -93,6 +93,8 @@
     <string name="action_example">Example action</string>
     <string name="tutor">Tutor: </string>
 
+    <string name="quick_search">Search by Tutor name or Category </string>
+
     <string name="enter_category">Enter Category:</string>
     <string name="enter_sub_category">Enter Sub Category:</string>
     <string name="select_price">Price Per Hour:</string>

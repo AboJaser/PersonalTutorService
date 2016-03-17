@@ -8,7 +8,7 @@
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="438dp">
 
 
         <TextView
@@ -17,34 +17,9 @@
             android:id="@+id/editText"
             android:textSize="18dp"
             android:text="Welcome !"
-            android:layout_above="@+id/labelQuickSummary"
-            android:layout_alignParentStart="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/userName"
-            android:textSize="18dp"
-            android:text="Undefined"
-
-            android:layout_below="@+id/logOutButton"
-            android:layout_alignEnd="@+id/logOutButton"
-            android:layout_marginEnd="55dp" />
-
-<TextView
-    android:padding="15dp"
-    android:id="@+id/labelQuickSummary"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textSize="18dp"
-    android:text="Quick Summary:"
-    android:layout_below="@+id/userName"/>
-            <include
-                layout="@layout/services_list_item"
-                android:layout_width="wrap_content"
-                android:layout_height="120dp"
-                android:layout_below="@+id/labelQuickSummary"/>
-
+            android:layout_alignBottom="@+id/logOutButton"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="24dp" />
 
 
         <Button
@@ -55,9 +30,36 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true" />
 
+        <AutoCompleteTextView
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/autoCompleteTextView"
+            android:hint="@string/quick_search"
+            android:layout_below="@+id/editText"
+            android:drawableRight="@mipmap/searchicon"
+            android:layout_alignStart="@+id/editText"
+            android:layout_alignEnd="@+id/logOutButton" />
+
+
+
+
 
 
     </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="457dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <ExpandableListView
+            android:layout_width="match_parent"
+            android:layout_height="301dp"
+            android:id="@+id/exp_list_view"
+            android:layout_weight="1.68">
 
+        </ExpandableListView>
+
+    </LinearLayout>
 
 </FrameLayout>
